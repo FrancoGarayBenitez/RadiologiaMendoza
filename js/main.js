@@ -46,28 +46,24 @@ function regionCabeza() {
             alert("Macizo facial agregado a la lista");
             precioTotal = precioTotal + macizoPrecio;
             resumen = resumen + macizoFacial + "\n";
-
             break;
         case "2":
             alert("Órbitas agregado a la lista");
             precioTotal = precioTotal + orbitasPrecio;
             resumen = resumen + orbitas + "\n";
-
             break;
         case "3":
             alert("Oídos agregado a la lista");
             precioTotal = precioTotal + oidosPrecio;
             resumen = resumen + oidos + "\n";
-
             break;
         case "4":
             alert("Cráneo completo agregado a la lista");
             precioTotal = precioTotal + craneoCompletoPrecio;
             resumen = resumen + craneoCompleto + "\n";
-
             break;
         case "5":
-            regiones();
+            break;
         default:
             alert("Opción no válida");
             break;
@@ -83,28 +79,24 @@ function regionColumna() {
             alert("Cervical agregado a la lista");
             precioTotal = precioTotal + cervicalPrecio;
             resumen = resumen + cervical + "\n";
-  
             break;
         case "2":
             alert("Dorsal agregado a la lista");
             precioTotal = precioTotal + dorsalPrecio;
             resumen = resumen + dorsal + "\n";
-   
             break;
         case "3":
             alert("Lumbosacra agregado a la lista");
             precioTotal = precioTotal + lumbosacraPrecio;
             resumen = resumen + lumbosacra + "\n";
-    
             break;
         case "4":
             alert("Columna completa agregado a la lista");
             precioTotal = precioTotal + columnaCompletaPrecio;
             resumen = resumen + columnaCompleta + "\n";
-
             break;
         case "5":
-            regiones();
+            break;
         default:
             alert("Opción no válida");
             break;
@@ -121,58 +113,48 @@ function regionExtremidades() {
             alert("Hombro agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + hombro + "\n";
-
             break;
         case "2":
             alert("Brazo agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + brazo + "\n";
-
             break;
         case "3":
             alert("Codo agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + codo + "\n";
-
             break;
         case "4":
             alert("Antebrazo agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + antebrazo + "\n";
-   
             break;
         case "5":
             alert("Mano y Muñeca agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + manoMuneca + "\n";
-
             break;
         case "6":
             alert("Fémur agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + femur + "\n";
-
             break;
         case "7":
             alert("Rodilla agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + rodilla + "\n";
-    
             break;
         case "8":
             alert("Pierna agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + pierna + "\n";
-
             break;
         case "9":
             alert("Pie agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + pie + "\n";
-
             break;
         case "10":
-            regiones();
             break;
         default:
             alert("Opción no válida");
@@ -239,9 +221,6 @@ function datosPaciente() {
 
     regiones();
 
-    alert("RESUMEN DE ESTUDIOS SOLICITADOS. \n\nPACIENTE: "+nombrePaciente+"\nDNI: "+dniPaciente+ "\n"+resumen+"\nPRECIO TOTAL: $"+precioTotal);
-    alert("DERIVE SU PACIENTE A LA SALA DE RAYOS X.\nMUCHAS GRACIAS !");
-
 }
 
 
@@ -273,3 +252,6 @@ for (let i=1; i<=3; i++) {
         alert("Usuario o contraseña incorrectos. Intente nuevamente.")
     }
 }
+
+alert("RESUMEN DE ESTUDIOS SOLICITADOS. \n\nPACIENTE: "+nombrePaciente+"\nDNI: "+dniPaciente+ "\n"+resumen+"\nPRECIO TOTAL: $"+precioTotal);
+alert("DERIVE SU PACIENTE A LA SALA DE RAYOS X.\nMUCHAS GRACIAS !");
