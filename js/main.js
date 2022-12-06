@@ -46,25 +46,25 @@ function regionCabeza() {
             alert("Macizo facial agregado a la lista");
             precioTotal = precioTotal + macizoPrecio;
             resumen = resumen + macizoFacial + "\n";
-            regiones();
+
             break;
         case "2":
             alert("Órbitas agregado a la lista");
             precioTotal = precioTotal + orbitasPrecio;
             resumen = resumen + orbitas + "\n";
-            regiones();
+
             break;
         case "3":
             alert("Oídos agregado a la lista");
             precioTotal = precioTotal + oidosPrecio;
             resumen = resumen + oidos + "\n";
-            regiones();
+
             break;
         case "4":
             alert("Cráneo completo agregado a la lista");
             precioTotal = precioTotal + craneoCompletoPrecio;
             resumen = resumen + craneoCompleto + "\n";
-            regiones();
+
             break;
         case "5":
             regiones();
@@ -83,25 +83,25 @@ function regionColumna() {
             alert("Cervical agregado a la lista");
             precioTotal = precioTotal + cervicalPrecio;
             resumen = resumen + cervical + "\n";
-            regiones();
+  
             break;
         case "2":
             alert("Dorsal agregado a la lista");
             precioTotal = precioTotal + dorsalPrecio;
             resumen = resumen + dorsal + "\n";
-            regiones();
+   
             break;
         case "3":
             alert("Lumbosacra agregado a la lista");
             precioTotal = precioTotal + lumbosacraPrecio;
             resumen = resumen + lumbosacra + "\n";
-            regiones();
+    
             break;
         case "4":
             alert("Columna completa agregado a la lista");
             precioTotal = precioTotal + columnaCompletaPrecio;
             resumen = resumen + columnaCompleta + "\n";
-            regiones();
+
             break;
         case "5":
             regiones();
@@ -121,55 +121,55 @@ function regionExtremidades() {
             alert("Hombro agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + hombro + "\n";
-            regiones();
+
             break;
         case "2":
             alert("Brazo agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + brazo + "\n";
-            regiones();
+
             break;
         case "3":
             alert("Codo agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + codo + "\n";
-            regiones();
+
             break;
         case "4":
             alert("Antebrazo agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + antebrazo + "\n";
-            regiones();
+   
             break;
         case "5":
             alert("Mano y Muñeca agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + manoMuneca + "\n";
-            regiones();
+
             break;
         case "6":
             alert("Fémur agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + femur + "\n";
-            regiones();
+
             break;
         case "7":
             alert("Rodilla agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + rodilla + "\n";
-            regiones();
+    
             break;
         case "8":
             alert("Pierna agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + pierna + "\n";
-            regiones();
+
             break;
         case "9":
             alert("Pie agregado a la lista");
             precioTotal = precioTotal + extremidadesPrecio;
             resumen = resumen + pie + "\n";
-            regiones();
+
             break;
         case "10":
             regiones();
@@ -192,23 +192,23 @@ function regiones() {
             case "1":
                 //LLamado a función para especificar región de cabeza
                 regionCabeza();
+                break;
 
             case "2":
                 //LLamado a función para especificar región de columna
                 regionColumna();
+                break;
             
             case "3":
                 alert("Tórax agregado a la lista");
                 precioTotal = precioTotal + toraxPrecio;
                 resumen = resumen + torax + "\n";
-                regiones();
                 break;
             
             case "4":
                 alert("Abdómen agregado a la lista");
                 precioTotal = precioTotal + abdomenPrecio;
                 resumen = resumen + abdomen + "\n";
-                regiones();
                 break;
             
             case "5":
@@ -222,11 +222,8 @@ function regiones() {
         }
         opcion=prompt("SELECCIONE REGIÓN ANATÓMICA A ESTUDIAR: \n1-Cabeza \n2-Columna \n3-Tórax \n4-Abdómen \n5-Extremidades superiores o inferiores \n6-Finalizar");
     }
-
-    alert("RESUMEN DE ESTUDIOS SOLICITADOS \n\nPACIENTE: "+nombrePaciente+"\nDNI: "+dniPaciente+ "\n"+resumen+"\nPRECIO TOTAL: $"+precioTotal);
-    
-    alert("DERIVE SU PACIENTE A LA SALA DE RAYOS X.\nMUCHAS GRACIAS !");
 }
+
 
 
 
@@ -237,10 +234,14 @@ let dniPaciente;
 
 function datosPaciente() {
 
-    nombrePaciente=prompt("INGRESE LOS DATOS DEL PACIENTE: \nNOMBRE:");
+    nombrePaciente=prompt("INGRESE LOS DATOS DEL PACIENTE: \nNOMBRE Y APELLIDO:");
     dniPaciente=prompt("DNI PACIENTE: ");
 
     regiones();
+
+    alert("RESUMEN DE ESTUDIOS SOLICITADOS. \n\nPACIENTE: "+nombrePaciente+"\nDNI: "+dniPaciente+ "\n"+resumen+"\nPRECIO TOTAL: $"+precioTotal);
+    alert("DERIVE SU PACIENTE A LA SALA DE RAYOS X.\nMUCHAS GRACIAS !");
+
 }
 
 
@@ -258,7 +259,7 @@ alert("Ha sido registrado correctamente. Inicie sesión.");
 
 //Inicio de sesión
 for (let i=1; i<=3; i++) {
-    let nombreIngreso=prompt("INICIO DE SESION. \nIngrese su nombre");
+    let nombreIngreso=prompt("INICIO DE SESION. \nIngrese su nombre y apellido");
     let passIngreso=prompt("Ingrese su contraseña");
 
     if (nombreIngreso === nombreRegistro && passIngreso === passRegistro) {
