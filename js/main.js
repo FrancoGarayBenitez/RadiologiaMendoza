@@ -1,66 +1,62 @@
-//Declaración Regiones
-let macizoFacial="Macizo facial";
-let orbitas="Órbitas";
-let oidos="Oídos";
-let craneoCompleto="Cráneo completo";
-let cervical="Cervical";
-let dorsal="Dorsal";
-let lumbosacra="Lumbosacra";
-let columnaCompleta="Columna completa";
-let torax="Tórax";
-let abdomen="Abdómen";
-let hombro="Hombro";
-let brazo="Brazo";
-let codo="Codo";
-let antebrazo="Antebrazo";
-let manoMuneca="Mano y Muñeca";
-let pelvis="Pelvis";
-let femur="Fémur";
-let rodilla="Rodilla";
-let pierna="Pierna";
-let pie="Pie";
-let resumen="\n";
+//CONSTRUCTOR DE LAS REGIONES
+class Region {
+    constructor(region,precio) {
+        this.region=region;
+        this.precio=precio;
+    }
+}
 
+const regionesAnatomicas=[
+    new Region ("Cráneo completo",5000),
+    new Region ("Orbitas",2000),
+    new Region ("Oídos",2000),
+    new Region ("Macizo",2000),
+    new Region ("Columna completa",10000),
+    new Region ("Cervical",2500),
+    new Region ("Dorsal",3500),
+    new Region ("Lumbosacra",3000),
+    new Region ("Tórax",5000),
+    new Region ("Abdómen",5000),
+    new Region ("Hombro",1500),
+    new Region ("Brazo",1000),
+    new Region ("Codo",1000),
+    new Region ("Antebrazo",1000),
+    new Region ("Mano y muñeca",1000),
+    new Region ("Pelvis",5000),
+    new Region ("Fémur",1500),
+    new Region ("Rodilla",1000),
+    new Region ("Pierna",1000),
+    new Region ("Tobillo",1000),
+    new Region ("Pie",1000),
+]
 
-
-//Precios de los estudios según región
-let macizoPrecio=2000;
-let orbitasPrecio=2000;
-let oidosPrecio=2000;
-let craneoCompletoPrecio=5000;
-let cervicalPrecio=2500;
-let dorsalPrecio=3500;
-let lumbosacraPrecio=3000;
-let columnaCompletaPrecio=10000;
-let toraxPrecio=5000;
-let abdomenPrecio=5000;
-let extremidadesPrecio=1000;
-let precioTotal=0;
+//ARRAY VACÍO PARA INCLUIR LOS ESTUDIOS SOLICITADOS
+resumen=[];
 
 
 //Region cabeza
 function regionCabeza() {
-    let cabeza=prompt("1-Macizo Facial \n2-Órbitas \n3-Oídos \n4-Cráneo completo \n5-Volver")
+    let cabeza=prompt("1-Cráneo completo \n2-Órbitas \n3-Oídos \n4-Macizo facial \n5-Volver")
     switch (cabeza) {
         case "1":
-            alert("Macizo facial agregado a la lista");
-            precioTotal = precioTotal + macizoPrecio;
-            resumen = resumen + macizoFacial + "\n";
+            alert("Cráneo completo agregado a la lista");
+            const search1Indice= regionesAnatomicas.findIndex((el)=>el.region==="Cráneo completo");
+            resumen.push(regionesAnatomicas[search1Indice]);
             break;
         case "2":
-            alert("Órbitas agregado a la lista");
-            precioTotal = precioTotal + orbitasPrecio;
-            resumen = resumen + orbitas + "\n";
+            alert("Orbitas agregado a la lista");
+            const search2Indice= regionesAnatomicas.findIndex((el)=>el.region==="Orbitas");
+            resumen.push(regionesAnatomicas[search2Indice]);
             break;
         case "3":
             alert("Oídos agregado a la lista");
-            precioTotal = precioTotal + oidosPrecio;
-            resumen = resumen + oidos + "\n";
+            const search3Indice= regionesAnatomicas.findIndex((el)=>el.region==="Oídos");
+            resumen.push(regionesAnatomicas[search3Indice]);
             break;
         case "4":
-            alert("Cráneo completo agregado a la lista");
-            precioTotal = precioTotal + craneoCompletoPrecio;
-            resumen = resumen + craneoCompleto + "\n";
+            alert("Macizo facial agregado a la lista");
+            const search4Indice= regionesAnatomicas.findIndex((el)=>el.region==="Macizo facial");
+            resumen.push(regionesAnatomicas[search4Indice]);
             break;
         case "5":
             break;
@@ -73,27 +69,27 @@ function regionCabeza() {
 
 //Región Columna
 function regionColumna() {
-    let columna=prompt("1-Cervical \n2-Dorsal \n3-Lumbosacra \n4-Columna completa \n5-Volver");
+    let columna=prompt("1-Columna completa \n2-Cervical \n3-Dorsal \n4-Lumbosacra \n5-Volver");
     switch (columna) {
         case "1":
-            alert("Cervical agregado a la lista");
-            precioTotal = precioTotal + cervicalPrecio;
-            resumen = resumen + cervical + "\n";
+            alert("Columna completa agregado a la lista");
+            const search1Indice= regionesAnatomicas.findIndex((el)=>el.region==="Columna completa");
+            resumen.push(regionesAnatomicas[search1Indice]);
             break;
         case "2":
-            alert("Dorsal agregado a la lista");
-            precioTotal = precioTotal + dorsalPrecio;
-            resumen = resumen + dorsal + "\n";
+            alert("Cervical agregado a la lista");
+            const search2Indice= regionesAnatomicas.findIndex((el)=>el.region==="Cervical");
+            resumen.push(regionesAnatomicas[search2Indice]);
             break;
         case "3":
-            alert("Lumbosacra agregado a la lista");
-            precioTotal = precioTotal + lumbosacraPrecio;
-            resumen = resumen + lumbosacra + "\n";
+            alert("Dorsal agregado a la lista");
+            const search3Indice= regionesAnatomicas.findIndex((el)=>el.region==="Dorsal");
+            resumen.push(regionesAnatomicas[search3Indice]);
             break;
         case "4":
-            alert("Columna completa agregado a la lista");
-            precioTotal = precioTotal + columnaCompletaPrecio;
-            resumen = resumen + columnaCompleta + "\n";
+            alert("Lumbosacra agregado a la lista");
+            const search4Indice= regionesAnatomicas.findIndex((el)=>el.region==="Lumbosacra");
+            resumen.push(regionesAnatomicas[search4Indice]);
             break;
         case "5":
             break;
@@ -106,55 +102,59 @@ function regionColumna() {
 
 //Región extremidades
 function regionExtremidades() {
-    let extremidades=prompt("1-Hombro \n2-Brazo \n3-Codo \n4-Antebrazo \n5-Mano y Muñeca \n6-Fémur \n7-Rodilla \n8-Pierna \n9-Pie \n10-Volver");
+    let extremidades=prompt("1-Hombro \n2-Brazo \n3-Codo \n4-Antebrazo \n5-Mano y Muñeca \n6-Fémur \n7-Rodilla \n8-Pierna \n9-Tobillo \n10-Pie \n11-Volver");
 
     switch (extremidades) {
         case "1":
             alert("Hombro agregado a la lista");
-            precioTotal = precioTotal + extremidadesPrecio;
-            resumen = resumen + hombro + "\n";
+            const search1Indice= regionesAnatomicas.findIndex((el)=>el.region==="Hombro");
+            resumen.push(regionesAnatomicas[search1Indice]);
             break;
         case "2":
             alert("Brazo agregado a la lista");
-            precioTotal = precioTotal + extremidadesPrecio;
-            resumen = resumen + brazo + "\n";
+            const search2Indice= regionesAnatomicas.findIndex((el)=>el.region==="Brazo");
+            resumen.push(regionesAnatomicas[search2Indice]);
             break;
         case "3":
             alert("Codo agregado a la lista");
-            precioTotal = precioTotal + extremidadesPrecio;
-            resumen = resumen + codo + "\n";
+            const search3Indice= regionesAnatomicas.findIndex((el)=>el.region==="Codo");
+            resumen.push(regionesAnatomicas[search3Indice]);
             break;
         case "4":
             alert("Antebrazo agregado a la lista");
-            precioTotal = precioTotal + extremidadesPrecio;
-            resumen = resumen + antebrazo + "\n";
+            const search4Indice= regionesAnatomicas.findIndex((el)=>el.region==="Antebrazo");
+            resumen.push(regionesAnatomicas[search4Indice]);
             break;
         case "5":
             alert("Mano y Muñeca agregado a la lista");
-            precioTotal = precioTotal + extremidadesPrecio;
-            resumen = resumen + manoMuneca + "\n";
+            const search5Indice= regionesAnatomicas.findIndex((el)=>el.region==="Mano y muñeca");
+            resumen.push(regionesAnatomicas[search5Indice]);
             break;
         case "6":
             alert("Fémur agregado a la lista");
-            precioTotal = precioTotal + extremidadesPrecio;
-            resumen = resumen + femur + "\n";
+            const search6Indice= regionesAnatomicas.findIndex((el)=>el.region==="Fémur");
+            resumen.push(regionesAnatomicas[search6Indice]);
             break;
         case "7":
             alert("Rodilla agregado a la lista");
-            precioTotal = precioTotal + extremidadesPrecio;
-            resumen = resumen + rodilla + "\n";
+            const search7Indice= regionesAnatomicas.findIndex((el)=>el.region==="Rodilla");
+            resumen.push(regionesAnatomicas[search7Indice]);
             break;
         case "8":
             alert("Pierna agregado a la lista");
-            precioTotal = precioTotal + extremidadesPrecio;
-            resumen = resumen + pierna + "\n";
+            const search8Indice= regionesAnatomicas.findIndex((el)=>el.region==="Pierna");
+            resumen.push(regionesAnatomicas[search8Indice]);
             break;
         case "9":
-            alert("Pie agregado a la lista");
-            precioTotal = precioTotal + extremidadesPrecio;
-            resumen = resumen + pie + "\n";
+            alert("Tobillo agregado a la lista");
+            const search9Indice= regionesAnatomicas.findIndex((el)=>el.region==="Tobillo");
+            resumen.push(regionesAnatomicas[search9Indice]);
             break;
         case "10":
+            alert("Pie agregado a la lista");
+            const search10Indice= regionesAnatomicas.findIndex((el)=>el.region==="Pie");
+            resumen.push(regionesAnatomicas[search10Indice]);
+        case "11":
             break;
         default:
             alert("Opción no válida");
@@ -167,9 +167,9 @@ function regionExtremidades() {
 //Solicitud Regiones Anatómicas
 function regiones() {
 
-    let opcion=prompt("SELECCIONE REGIÓN ANATÓMICA A ESTUDIAR: \n1-Cabeza \n2-Columna \n3-Tórax \n4-Abdómen \n5-Extremidades superiores o inferiores \n6-Finalizar");
+    let opcion=prompt("SELECCIONE REGIÓN ANATÓMICA A ESTUDIAR: \n1-Cabeza \n2-Columna \n3-Tórax \n4-Abdómen \n5-Pelvis \n6-Extremidades superiores o inferiores \n7-Finalizar");
 
-    while (opcion != "6") {
+    while (opcion != "7") {
         switch (opcion) {
             case "1":
                 //LLamado a función para especificar región de cabeza
@@ -183,34 +183,35 @@ function regiones() {
             
             case "3":
                 alert("Tórax agregado a la lista");
-                precioTotal = precioTotal + toraxPrecio;
-                resumen = resumen + torax + "\n";
+                const search1Indice= regionesAnatomicas.findIndex((el)=>el.region==="Tórax");
+                resumen.push(regionesAnatomicas[search1Indice]);
                 break;
             
             case "4":
                 alert("Abdómen agregado a la lista");
-                precioTotal = precioTotal + abdomenPrecio;
-                resumen = resumen + abdomen + "\n";
+                const search2Indice= regionesAnatomicas.findIndex((el)=>el.region==="Abdómen");
+                resumen.push(regionesAnatomicas[search2Indice]);
                 break;
-            
             case "5":
+                alert("Pelvis agregado a la lista");
+                const search3Indice= regionesAnatomicas.findIndex((el)=>el.region==="Pelvis");
+                resumen.push(regionesAnatomicas[search3Indice]);
+                break;
+            case "6":
                 //Llamado a función para expecificar extremidades
                 regionExtremidades();
                 break;
-                
             default:
                 alert("Opción no válida");
                 break;
         }
-        opcion=prompt("SELECCIONE REGIÓN ANATÓMICA A ESTUDIAR: \n1-Cabeza \n2-Columna \n3-Tórax \n4-Abdómen \n5-Extremidades superiores o inferiores \n6-Finalizar");
+        opcion=prompt("SELECCIONE REGIÓN ANATÓMICA A ESTUDIAR: \n1-Cabeza \n2-Columna \n3-Tórax \n4-Abdómen \n5-Pelvis \n6-Extremidades superiores o inferiores \n7-Finalizar");
     }
 }
 
 
 
-
-
-//Menú
+//Datos del Paciente
 let nombrePaciente;
 let dniPaciente;
 
@@ -227,7 +228,7 @@ function datosPaciente() {
 //Registro
 alert("-----RADIOLOGÍA MENDOZA----- \nSistema de solicitud de radiografías. \nAcceso exclusivo para profesionales médicos.");
 
-let nombreRegistro=prompt("BIENVENIDO/A DOCTOR/A A RADIOLOGÍA MENDOZA. \nIngrese su nombre y apellido para registrarse. Con su registro podrá solicitar estudios para sus pacientes.");
+let nombreRegistro=prompt("BIENVENIDO/A DOCTOR/A A RADIOLOGÍA MENDOZA. \nIngrese su nombre y apellido para registrarse. Con su registro podrá solicitar radiografías para sus pacientes.");
 
 let passRegistro=prompt("Cree su contraseña.");
 
@@ -253,5 +254,31 @@ for (let i=1; i<=3; i++) {
     }
 }
 
-alert("RESUMEN DE ESTUDIOS SOLICITADOS. \n\nPACIENTE: "+nombrePaciente+"\nDNI: "+dniPaciente+ "\n"+resumen+"\nPRECIO TOTAL: $"+precioTotal);
-alert("DERIVE SU PACIENTE A LA SALA DE RAYOS X.\nMUCHAS GRACIAS !");
+
+//RESUMEN AL FINALIZAR
+function resumenFinalPrecio (arr,fn) {
+    for (const elemento of arr) {
+        fn(elemento.precio);
+    }
+}
+function resumenFinalRegiones (arr,fn) {
+    for (const elemento of arr) {
+        fn(elemento.region);
+    }
+}
+
+let totalPrecio=0;
+let totalRegiones="";
+
+function sumatoriaPrecios(num) {
+    totalPrecio += num;
+}
+function sumatoriaRegiones(el) {
+    totalRegiones += "\n" + el ;
+}
+
+resumenFinalRegiones(resumen,sumatoriaRegiones);
+resumenFinalPrecio(resumen,sumatoriaPrecios);
+
+alert("PACIENTE: \nNombre: "+nombrePaciente+"\nDNI: "+dniPaciente+"\n\nRADIOGRAFÍAS SOLICITADAS:"+totalRegiones+"\n\nPRECIO FINAL: $"+totalPrecio);
+alert("DERIVE SU PACIENTE A LA SALA DE RAYOS X. MUCHAS GRACIAS !");
