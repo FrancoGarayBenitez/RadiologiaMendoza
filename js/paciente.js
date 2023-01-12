@@ -35,7 +35,7 @@ formPaciente.addEventListener("submit", (e)=> {
         )
         sessionStorage.setItem("pacienteActivo",JSON.stringify(listaPacientes));
     
-        window.location.href="../index.html";
+        window.location.href="../solicitud_estudios.html";
     }
 })
 

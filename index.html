@@ -6,52 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-    <title>RADIOLOGÍA MENDOZA | Inicio</title>
+    <title>Radiología Mendoza | Iniciar sesión</title>
 </head>
-<body id="principal">
-    <header>
-        <nav class="navbar bg-dark" data-bs-theme="dark">
-            <div class="container-fluid">
-                <h1 class="navbar-brand tituloHeader">RADIOLOGÍA MENDOZA</h1>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" id="searchAnatomia" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit" id="btnBuscar">Buscar</button>
-                </form>
-            </div>
-        </nav>
-    </header>
+<body>
     <main>
-        <section class="cardContainer">
-            <!-- Contenido dinámico -->
-
-        </section>
-        <section class="paciente_y_tabla">
-            <div class="datosPaciente">
-                <!-- Contenido dinámico -->
+        <div class="globalContainer">
+            <div class="titulo">
+                <h1>RADIOLOGÍA MENDOZA</h1>
+                <h2>Bienvenidos/as a nuestro sistema de solicitud de radiografías.</h2>
+                <p>Acceso exclusivo para profesionales médicos</p>
             </div>
-            <div class="tableContainer">
-                <h2>TABLA DE REGIONES SOLICITADAS</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Región</th>
-                            <th>Precio</th>
-                            <th>Cantidad</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody">
-                        <!-- Contenido Dinámico -->                        
-                    </tbody>
-                </table>
+            <div class="formContainer">
+                <h2>INICIO DE SESIÓN</h2>
+                <form action="" id="formInicioSesion" class="formulario">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="userInicioSesion" placeholder="userInicioSesion">
+                        <label for="userInicioSesion">Nombre de usuario</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="passInicioSesion" placeholder="passInicioSesion">
+                        <label for="passInicioSesion">Contraseña</label>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Iniciar sesión</button>
+                     <!-- <p> para contenido dinámico -->
+                    <p id="avisosInicioSesion"></p>
+                </form>
+                <p class="parrafoFinal">No tengo cuenta, quiero hacer el <a href="/registro.html" class="link-warning">Registro</a></p>
             </div>
-        </section>
-        <div class="finalizar">
-            <button id="btnFinalizar" class="btn btn-warning">Finalizar</button>
-            <!-- Contenido dinámico -->
-            <p id="mensajeFinal" class="styleMensajeFinal"></p>
         </div>
     </main>
-
 
     <script src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
