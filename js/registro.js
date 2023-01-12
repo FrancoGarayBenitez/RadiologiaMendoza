@@ -8,6 +8,7 @@ avisosRegistro=document.querySelector("#avisosRegistro");
 
 //Inicializar variable según contenido
 const listaUsuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+console.log(listaUsuarios);
 
 //Constructor de usuario
 class Usuario {

@@ -138,12 +138,6 @@ body {
 
 
 /* Tabla */
-.paciente_y_tabla{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
 .tableContainer {
 margin: 50px auto;
 width: 600px;

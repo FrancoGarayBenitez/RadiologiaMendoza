@@ -4,6 +4,10 @@ passInicioSesion=document.querySelector("#passInicioSesion"),
 avisosInicioSesion=document.querySelector("#avisosInicioSesion");
 
 
+//Inicializar variable según contenido
+const listaUsuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+
 //Iniciar sesión
 function inicioSesion(usuarios) {
     let acceso=false;
@@ -16,11 +20,8 @@ function inicioSesion(usuarios) {
     }
 
     if (acceso) {
-        window.location.href="../paciente.html";
-    } else if (usuarios.length === 0) {
-        avisosInicioSesion.style.color="red";
-        avisosInicioSesion.innerHTML="Usuario no encontrado";
-    } else {
+        window.location.href="./pages/paciente.html";
+    } else if (usuarios.length===0 || acceso==false) {
         avisosInicioSesion.style.color="red";
         avisosInicioSesion.innerHTML="Usuario no encontrado";
     }
@@ -31,6 +32,6 @@ function inicioSesion(usuarios) {
 //Evento al iniciar sesión
 formInicioSesion.addEventListener("submit", (e)=>{
     e.preventDefault();
-
-    inicioSesion(JSON.parse(localStorage.getItem("usuarios")));
+    
+    inicioSesion(listaUsuarios);
 })

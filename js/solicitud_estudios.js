@@ -75,7 +75,7 @@ function crearHtml(array) {
         const {id, region, precio, img} = el
 
         div.innerHTML=
-        `<img src="./img/${img}">
+        `<img src="../img/${img}">
             <div class="contenido">
                 <h2>${region}</h2>
                 <p>Precio: $${precio}</p>
