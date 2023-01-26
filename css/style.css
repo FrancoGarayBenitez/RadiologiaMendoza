@@ -38,8 +38,11 @@ body {
 }
 .titulo p {
     font-family: 'Rubik', sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: white;
+}
+.formContainer {
+    margin-top: 2rem;
 }
 .formContainer h2{
     font-family: 'Rubik', sans-serif;
@@ -49,7 +52,7 @@ body {
     color: white;
 }
 
-/* INDEX */
+/* SOLICITUD ESTUDIOS */
 
 /* Header */
 .tituloHeader {
@@ -58,12 +61,10 @@ body {
 }
 /* Main */
 #principal {
-    background: linear-gradient(rgba(5,7,12,0.1), rgba(5,7,12,0.1)), 
+    background: linear-gradient(rgba(5,7,12,0.5), rgba(5,7,12,0.5)), 
     url(../img/bg_main.jpg) no-repeat center center fixed;
     background-size: cover;
 }
-
-
 /* Cards */
 .cardContainer {
     width: 100%;
@@ -116,7 +117,6 @@ body {
     background-color:#2980b9;
     color: white;
 }
-
 /* Datos paciente */
 .datosPaciente {
     display: flex;
@@ -135,8 +135,6 @@ body {
     font-family: 'Rubik', sans-serif;
     color: white;
 }
-
-
 /* Tabla */
 .tableContainer {
 margin: 50px auto;
@@ -167,7 +165,6 @@ tr:hover td {
     background-color: #369681;
     color: white;
 }
-
 /* Finalizar */
 .finalizar {
     display: flex;
@@ -181,4 +178,96 @@ tr:hover td {
     font-family: 'Rubik', sans-serif;
     font-size: 2rem;
     color: white;
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width:992px) {
+    .titulo h1 {
+        font-size: 3rem;
+    }
+    body {
+        background: linear-gradient(rgba(5,7,12,0.70), rgba(5,7,12,0.70)), 
+        url(../img/bg_main3.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+}
+@media (max-width:768px) {
+    .titulo h1 {
+        font-size: 2.5rem;
+    }
+    .titulo h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .titulo p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .formContainer {
+        margin-top: 2rem;
+    }
+    nav .container-fluid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (min-width:320px) and (max-width:576px) {
+    .titulo h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .titulo h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .titulo p {
+        font-size: 1rem;
+        text-align: center;
+        margin: 1rem;
+    }
+    .formContainer h2 {
+        font-size: 1.5rem;
+    }
+    .tituloHeader {
+        font-size: 1.5rem;
+    }
+    nav .container-fluid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        width: 220px;
+    }
+    .card img {
+        width: 100%;
+        height: 200px;
+    }
+    .contenido {
+        padding: 5px;
+        text-align: center;
+    }
+    .contenido h2 {
+        font-size: 1.5rem;
+    }
+    .contenido p {
+        font-size: 1rem;
+    }
+    .datosPaciente h2 {
+        font-size: 2rem;
+    }
+    .datosPaciente p {
+        font-size: 1rem;
+    }
+    .tableContainer {
+        margin: 50px auto;
+        width: 100%;
+    }
+    .tableContainer h2 {
+        font-size: 2rem;
+    }
 }

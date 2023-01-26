@@ -10,7 +10,7 @@ avisosPaciente=document.querySelector("#avisosPaciente");
 
 //Función para recuperar datos de SS
 function recuperarSS() {
-    let datos=sessionStorage.getItem("usuarioActivo");
+    let datos= sessionStorage.getItem("usuarioActivo");
     return datos;
 }
 

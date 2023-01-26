@@ -30,7 +30,7 @@ function guardarStorage(lista) {
 formRegistro.addEventListener("submit",(e)=>{
     e.preventDefault();
     
-    let newUser=new Usuario(nombreReg.value, apellidoReg.value, userReg.value, passReg.value, matricula.value);
+    let newUser= new Usuario(nombreReg.value, apellidoReg.value, userReg.value, passReg.value, matricula.value);
     let errores = "";
     let entrar = true;
     avisosRegistro.innerHTML="";
